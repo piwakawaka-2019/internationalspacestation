@@ -8,6 +8,7 @@ class App extends React.Component {
     this.state = {
     }
     this.printSatellite = this.printSatellite.bind(this);
+    this.refreshData = this.refreshData.bind(this);
   }
   componentDidMount(){
     getSatellite(this.printSatellite)
@@ -21,15 +22,19 @@ class App extends React.Component {
       altitude: data.altitude,
       velocity: data.velocity
     })
-    console.log(this.state)
+    // console.log('first state: ', this.state)
   }
 
+  refreshData (){
+    setTimeout(getSatellite(this.printSatellite), 2000)
+  }
   render() {
     return (
       <div>
         {Object.entries(this.state).map(([key, value]) => {
           return <h2 key={key}>{key}: {value}</h2>
         })}
+        <button onClick={this.refreshData}>refresh</button>
         {/* {this.state.map((data)=> {
           return <h2>{data}</h2>
         })} */}
