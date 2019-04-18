@@ -1,6 +1,7 @@
 import React from 'react'
 // import * as api from '../api'
 import {getSatellite} from "../api"
+import Background from './Background'
 
 class App extends React.Component {
   constructor(props) {
@@ -33,7 +34,10 @@ class App extends React.Component {
         {/* {this.state.map((data)=> {
           return <h2>{data}</h2>
         })} */}
+         <Background/>
       </div>
+
+     
     );
   }
 }
