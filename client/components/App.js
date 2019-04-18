@@ -22,6 +22,7 @@ class App extends React.Component {
       altitude: data.altitude,
       velocity: data.velocity
     })
+    this.refreshData()
     // console.log('first state: ', this.state)
   }
 
@@ -34,7 +35,7 @@ class App extends React.Component {
         {Object.entries(this.state).map(([key, value]) => {
           return <h2 key={key}>{key}: {value}</h2>
         })}
-        <button onClick={this.refreshData}>refresh</button>
+        {/* <button onClick={this.refreshData}>refresh</button> */}
         {/* {this.state.map((data)=> {
           return <h2>{data}</h2>
         })} */}
