@@ -32,13 +32,13 @@ class App extends React.Component {
   }
   render() {
     let style = {
+        display: 'inline-block',
         borderRadius: '35px',
         padding: '20px',
         fontFamily: 'Helvetica',
         fontWeight: 'Light',
         backgroundColor: 'rgba(189, 195, 199, 0.5)',
-        fontSize: '20px',
-        width: '20%'
+        fontSize: '20px'
     }
     let textStyle = {
         color: 'rgba(0,0,0,1)'
