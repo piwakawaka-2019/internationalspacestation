@@ -13,6 +13,7 @@ class App extends React.Component {
   }
   componentDidMount(){
     getSatellite(this.printSatellite)
+    this.refreshData()
   }
   
   printSatellite(err, data) {
@@ -23,12 +24,11 @@ class App extends React.Component {
       altitude: data.altitude,
       velocity: data.velocity
     })
-    // this.refreshData()
-    // console.log('first state: ', this.state)
+    console.log("load")
   }
 
   refreshData (){
-    setTimeout(getSatellite(this.printSatellite), 5000)
+    setInterval(() => getSatellite(this.printSatellite), 1500)
   }
   render() {
     let style = {
@@ -38,7 +38,7 @@ class App extends React.Component {
         fontWeight: 'Light',
         backgroundColor: 'rgba(189, 195, 199, 0.5)',
         fontSize: '20px',
-        width: '28%'
+        width: '20%'
     }
     let textStyle = {
         color: 'rgba(0,0,0,1)'
