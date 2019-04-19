@@ -10,11 +10,13 @@ class Background extends Component {
                     </div>
                 </div>
 
-                <div id="vidtop-content">
+                {/* <div id="vidtop-content">
                     <div className="vid-info">
-                        <h1>DATA</h1>
+                        <h1 className="horizontal-scroll">
+                            
+                        </h1>
                     </div>
-                </div>
+                </div> */}
             </div>
         );
     }
