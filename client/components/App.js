@@ -1,6 +1,7 @@
 import React from 'react'
 // import * as api from '../api'
 import {getSatellite} from "../api"
+import Background from './Background'
 
 class App extends React.Component {
   constructor(props) {
@@ -33,12 +34,13 @@ class App extends React.Component {
   render() {
     let style = {
         display: 'inline-block',
-        borderRadius: '35px',
+        borderRadius: '10px',
         padding: '20px',
         fontFamily: 'Helvetica',
         fontWeight: 'Light',
         backgroundColor: 'rgba(189, 195, 199, 0.5)',
-        fontSize: '20px'
+        fontSize: '12px',
+        width: '300px'
     }
     let textStyle = {
         color: 'rgba(0,0,0,1)'
@@ -52,7 +54,10 @@ class App extends React.Component {
         {/* {this.state.map((data)=> {
           return <h2>{data}</h2>
         })} */}
+         <Background/>
       </div>
+
+     
     );
   }
 }
