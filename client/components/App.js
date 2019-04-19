@@ -28,9 +28,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {Object.entries(this.state).map(([key, value]) => {
+        {/* {Object.entries(this.state).map(([key, value]) => {
           return <h2 key={key}>{key}: {value}</h2>
-        })}
+        })} */}
         {/* {this.state.map((data)=> {
           return <h2>{data}</h2>
         })} */}
